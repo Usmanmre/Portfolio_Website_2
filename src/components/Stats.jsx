@@ -36,7 +36,7 @@ const Stats = () => (
             <h2 className="title-font font-medium text-3xl text-yellow-500">
               100+
             </h2>
-            <p className="leading-relaxed">Happy Customers</p>
+            <p className="leading-relaxed text-slate-100">Happy Customers</p>
           </div>
         </div>
         <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -57,7 +57,7 @@ const Stats = () => (
             <h2 className="title-font font-medium text-3xl text-yellow-500">
               200+
             </h2>
-            <p className="leading-relaxed">Successfull Projects</p>
+            <p className="leading-relaxed text-slate-100">Successfull Projects</p>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ const Stats = () => (
               {" "}
               Fiverr
             </h2>
-            <p className="leading-relaxed">Level 2 Seller </p>
+            <p className="leading-relaxed text-slate-100">Level 2 Seller </p>
           </div>
         </div>
       </div>

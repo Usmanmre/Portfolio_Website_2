@@ -3,7 +3,7 @@ import React from 'react'
 const Services = () => {
   return (
     <div>
-<section id='services' className="text-gray-600  flex justify-center items-center body-font">
+<section id='services' className="text-gray-600   flex justify-center items-center body-font">
   <div className="container px-5 py-24 mx-auto flex flex-wrap">
   <h1 className="text-3xl font-medium title-font   text-white    mb-12 text-center">What we <span className='text-yellow-600 font-bold'>Offers...?</span> </h1>
 

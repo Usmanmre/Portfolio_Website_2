@@ -5,7 +5,6 @@ import Carrot from "../Images/Carrot.png";
 import car from "../Images/car.png";
 import Hook from "../Images/Hook/Hook.png";
 import Logofolio from "../Images/Logofolio.png";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Gallery() {
@@ -13,7 +12,7 @@ function Gallery() {
     <section id="products" className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
+          <h1 className="sm:text-3xl text-2xl font-medium  title-font mb-4 text-white">
             Showcasing innovative work created for{" "}
             <span className="text-yellow-500">
               {" "}
@@ -22,7 +21,7 @@ function Gallery() {
           </h1>
         </div>
 
-        <div className="flex flex-wrap cursor-pointer -m-4">
+        <div className="flex flex-wrap cursor-pointer ">
   {/* Static Content */}
   {/* This can be kept as a placeholder if needed */}
   
