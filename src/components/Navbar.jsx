@@ -20,8 +20,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="border-gray-200 text-white bg-black">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="border-gray-200 text-white bg-black p-3  ">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
         <a
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -30,7 +30,7 @@ function Navbar() {
         </a>
         <button
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:text-yellow-600 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:text-yellow-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -53,61 +53,99 @@ function Navbar() {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-            <li>
-              <button
-                className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600"
-                onClick={handleAbout}
-              >
-                About
-              </button>
-            </li>
-            {isHomePage && (
-              <>
-                <Link
-                  to="products"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600"
-                >
-                  Products
-                </Link>
-                <Link
-                  to="reviews"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600"
-                >
-                  Reviews
-                </Link>
-                <Link
-                  to="services"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600"
-                >
-                  Services
-                </Link>
-                <Link
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600"
-                >
-                  Contact Us
-                </Link>
-              </>
-            )}
-          </ul>
-        </div>
+  <ul className="font-medium font-oswald flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+    
+    {/* Home Button */}
+    <li className="relative group">
+      <button
+        className="text-sm font-regular leading-6 cursor-pointer hover:text-yellow-600 relative z-10 w-16 h-16 flex items-center justify-center rounded-full"
+        onClick={handleHome}
+      >
+        Home
+      </button>
+      <span className="absolute inset-0 border border-transparent rounded-full group-hover:border-yellow-100 group-hover:scale-110 transition-all duration-300 ease-in-out"></span>
+      {/* <span className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 bg-yellow-600 w-1.5 h-1.5  rounded-full"></span> */}
+     
+      </li>
+
+    {isHomePage && (
+      <>
+        {/* Products */}
+        <li className="relative group">
+          <Link
+            to="products"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600 relative z-10 w-16 h-16 flex items-center justify-center rounded-full"
+          >
+            Products
+          </Link>
+          <span className="absolute inset-0 border border-transparent rounded-full group-hover:border-yellow-100 group-hover:scale-110 transition-all duration-300 ease-in-out"></span>
+          {/* <span className="absolute bottom-[10px] left-1/2 transform hidden hover:visible -translate-x-1/2 bg-yellow-600 w-1.5 h-1.5  rounded-full"></span> */}
+          </li>
+
+        {/* Reviews */}
+        <li className="relative group">
+          <Link
+            to="reviews"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600 relative z-10 w-16 h-16 flex items-center justify-center rounded-full"
+          >
+            Reviews
+          </Link>
+          <span className="absolute inset-0 border border-transparent rounded-full group-hover:border-yellow-100 group-hover:scale-110 transition-all duration-300 ease-in-out"></span>
+        </li>
+
+        {/* Services */}
+        <li className="relative group">
+          <Link
+            to="services"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600 relative z-10 w-16 h-16 flex items-center justify-center rounded-full"
+          >
+            Services
+          </Link>
+          <span className="absolute inset-0 border border-transparent rounded-full group-hover:border-yellow-100 group-hover:scale-110 transition-all duration-300 ease-in-out"></span>
+        </li>
+
+        {/* Contact Us */}
+        {/* <li className="relative group">
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="text-sm font-semibold leading-6 cursor-pointer hover:text-yellow-600 relative z-10 w-16 h-16 flex items-center justify-center rounded-full"
+          >
+            Contact Us
+          </Link>
+          <span className="absolute inset-0 border-2 border-transparent rounded-full group-hover:border-yellow-400 transition-all duration-300 ease-in-out"></span>
+        </li> */}
+      </>
+    )}
+
+    {/* About Button */}
+    <li className="relative group">
+      <button
+        className="text-sm font-regular leading-6 cursor-pointer hover:text-yellow-600 relative z-10 w-16 h-16 flex items-center justify-center rounded-full"
+        onClick={handleAbout}
+      >
+        About
+      </button>
+      <span className="absolute inset-0 border border-transparent rounded-full group-hover:border-yellow-100 group-hover:scale-110 transition-all duration-300 ease-in-out"></span>
+      </li>
+  </ul>
+</div>
+
       </div>
 
       <Dialog open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} className="bg-black lg:hidden">
@@ -176,7 +214,7 @@ function Navbar() {
                 >
                   Services
                 </Link>
-                    <Link
+                    {/* <Link
                       to="contact"
                       spy={true}
                       smooth={true}
@@ -185,7 +223,7 @@ function Navbar() {
                       className="block py-2 text-base font-semibold leading-6 cursor-pointer hover:text-yellow-600"
                     >
                       Contact Us
-                    </Link>
+                    </Link> */}
                   </>
                 )}
               </div>
