@@ -39,7 +39,7 @@ const Testimonials = () => {
                     />
                     <span className="flex-grow flex flex-col pl-4 items-start">
                       <span className="title-font font-medium text-white">
-                        Angelena
+                      Angie
                       </span>
                       <span className="text-gray-500 text-sm">Coach</span>
                     </span>
@@ -73,7 +73,7 @@ const Testimonials = () => {
                     />
                     <span className="flex-grow flex flex-col pl-4 items-start">
                       <span className="title-font font-medium text-white">
-                      Alexander
+                      Alexander Kemperman
                       </span>
                       <span className="text-gray-500 text-sm">Entrepreneur</span>
                     </span>
